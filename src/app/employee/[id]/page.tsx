@@ -1,8 +1,14 @@
 import { notFound } from "next/navigation";
 import Tabs from "@/app/components/ui/Tabs";
 
-// ✅ Don't define PageProps — just type inline!
-export default async function Page({ params }: { params: { id: string } }) {
+// Dummy data loader
+async function getEmployee(id: string) {
+  const res = await fetch(`https://dummyjson.com/users/${id}`);
+  if (!res.ok) return null;
+  return res.json();
+}
+
+export default async function EmployeePage({ params }: { params: { id: string } }) {
   const user = await getEmployee(params.id);
 
   if (!user) return notFound();
@@ -12,8 +18,8 @@ export default async function Page({ params }: { params: { id: string } }) {
       title: "Overview",
       content: (
         <div>
-          <p className="text-sm">Top performer in their department.</p>
-          <p className="text-sm mt-2">Exceeded quarterly targets.</p>
+          <p className="text-sm">This employee is a top performer in their department.</p>
+          <p className="text-sm mt-2">They&apos;ve consistently exceeded quarterly targets.</p>
         </div>
       ),
     },
@@ -27,6 +33,16 @@ export default async function Page({ params }: { params: { id: string } }) {
         </ul>
       ),
     },
+    {
+      title: "Feedback",
+      content: (
+        <div className="text-sm space-y-2">
+          <p>🌟 “Always proactive and reliable.”</p>
+          <p>🌟 “Leads with empathy and clarity.”</p>
+          <p>🌟 “Strong contributor in cross-team projects.”</p>
+        </div>
+      ),
+    },
   ];
 
   return (
@@ -36,13 +52,8 @@ export default async function Page({ params }: { params: { id: string } }) {
       </h1>
       <p className="text-gray-600 text-sm mb-2">📧 {user.email}</p>
       <p className="text-gray-600 text-sm mb-4">📱 {user.phone}</p>
+
       <Tabs tabs={tabs} />
     </div>
   );
-}
-
-async function getEmployee(id: string) {
-  const res = await fetch(`https://dummyjson.com/users/${id}`);
-  if (!res.ok) return null;
-  return res.json();
 }

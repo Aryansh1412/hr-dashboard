@@ -2,7 +2,21 @@
 
 A feature-rich HR Dashboard built with **Next.js 14**, **Tailwind CSS**, and **Context API**. It helps HR teams visualize and manage employee data effectively.
 
-![HR Dashboard Screenshot](./public/screenshot.png)
+## 📸 Screenshots
+
+### 🏠 Dashboard Homepage
+![Dashboard Screenshot](public/screenshots/dashboard.png)
+
+### 👤 Employee Profile Page
+![Employee Page Screenshot](public/screenshots/employee-page.png)
+
+### 📌 Bookmark Manager
+![Bookmark Screenshot](public/screenshots/bookmarks.png)
+
+### 📊 Analytics Page
+![Analytics Screenshot](public/screenshots/analytics-1.png)
+![Analytics Screenshot](public/screenshots/analytics-2.png)
+
 
 ---
 
@@ -51,3 +65,32 @@ A feature-rich HR Dashboard built with **Next.js 14**, **Tailwind CSS**, and **C
 ```bash
 git clone https://github.com/Aryansh1412/hr-dashboard.git
 cd hr-dashboard
+---
+
+### 🔗 App Routes & Navigation
+
+You can directly access key pages of the dashboard using the following routes:
+
+- **🏠 Dashboard Homepage**  
+  `/` – Displays the main employee dashboard.
+
+- **👤 Employee Profile Page**  
+  `/employee/[id]` – View an individual employee’s full profile.  
+  Example: `/employee/5`
+
+- **📌 Bookmark Manager**  
+  `/bookmarks` – View and manage your bookmarked employees.
+
+- **📊 Analytics Page**  
+  `/analytics` – Visualize employee and department performance trends.
+
+---
+
+### 🧭 How to Use
+
+You can manually navigate by typing routes into your browser’s address bar:
+
+```text
+https://hr-dashboard-m7gi.vercel.app/bookmarks
+https://hr-dashboard-m7gi.vercel.app/employee/3
+https://hr-dashboard-m7gi.vercel.app/analytics
