@@ -5,17 +5,17 @@ A feature-rich HR Dashboard built with **Next.js 14**, **Tailwind CSS**, and **C
 ## 📸 Screenshots
 
 ### 🏠 Dashboard Homepage
-![Dashboard Screenshot](public/screenshots/dashboard.png)
+![Dashboard Screenshot](./public/dashboard.png)
 
 ### 👤 Employee Profile Page
-![Employee Page Screenshot](public/screenshots/employee-page.png)
+![Employee Page Screenshot](./public/employee-page.png)
 
 ### 📌 Bookmark Manager
-![Bookmark Screenshot](public/screenshots/bookmarks.png)
+![Bookmark Screenshot](./public/bookmarks.png)
 
 ### 📊 Analytics Page
-![Analytics Screenshot](public/screenshots/analytics-1.png)
-![Analytics Screenshot](public/screenshots/analytics-2.png)
+![Analytics Screenshot](./public//analytics-1.png)
+![Analytics Screenshot](./public/analytics-2.png)
 
 
 ---
